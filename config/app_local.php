@@ -15,7 +15,7 @@ return [
      * Development Mode:
      * true: Errors and warnings shown.
      */
-    'debug' => filter_var(env('DEBUG', true), FILTER_VALIDATE_BOOLEAN),
+    'debug' => filter_var(env('DEBUG', false), FILTER_VALIDATE_BOOLEAN),
 
     /*
      * Security and encryption configuration
@@ -25,7 +25,7 @@ return [
      *   You should treat it as extremely sensitive data.
      */
     'Security' => [
-        'salt' => env('SECURITY_SALT', '__SALT__'),
+        'salt' => env('SECURITY_SALT', 'f91ba6ce76300bc41e5224477242c4022ce190096e258753fcb65464201272d3'),
     ],
 
     /*
@@ -44,16 +44,15 @@ return [
              */
             //'port' => 'non_standard_port_number',
 
-            'username' => 'my_app',
-            'password' => 'secret',
+            'username' => 'postgres',
+            'password' => 'postgres',
 
-            'database' => 'my_app',
+            'database' => 'museu',
             /*
              * If not using the default 'public' schema with the PostgreSQL driver
              * set it here.
              */
             //'schema' => 'myapp',
-
             /*
              * You can use a DSN string to set the entire configuration
              */
@@ -64,12 +63,16 @@ return [
          * The test connection is used during the test suite.
          */
         'test' => [
+            'datasource' => 'Database/Postgres',
+            'persistent' => true,
             'host' => 'localhost',
-            //'port' => 'non_standard_port_number',
-            'username' => 'my_app',
-            'password' => 'secret',
-            'database' => 'test_myapp',
-            //'schema' => 'myapp',
+            'port' => '5432',
+            'username' => 'postgres',
+            'password' => 'postgres',
+            'database' => 'museu',
+            'schema' => 'public',
+            'prefix' => '',
+            'encoding' => 'utf8',
             'url' => env('DATABASE_TEST_URL', null),
         ],
     ],
