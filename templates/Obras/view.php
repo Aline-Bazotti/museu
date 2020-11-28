@@ -7,11 +7,11 @@
 <div class="row">
     <aside class="column">
         <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
+            <h4 class="heading"><?= __('Ações') ?></h4>
             <?= $this->Html->link(__('Edit Obra'), ['action' => 'edit', $obra->id], ['class' => 'side-nav-item']) ?>
             <?= $this->Form->postLink(__('Delete Obra'), ['action' => 'delete', $obra->id], ['confirm' => __('Are you sure you want to delete # {0}?', $obra->id), 'class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('List Obras'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('New Obra'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
+            <?= $this->Html->link(__('Listar Obras'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+            <?= $this->Html->link(__('Criar Obra'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
         </div>
     </aside>
     <div class="column-responsive column-80">

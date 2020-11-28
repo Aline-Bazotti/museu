@@ -5,7 +5,7 @@
  */
 ?>
 <div class="visitantes index content">
-    <?= $this->Html->link(__('New Visitante'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <?= $this->Html->link(__('Criar Visitante'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <h3><?= __('Visitantes') ?></h3>
     <div class="table-responsive">
         <table>
@@ -18,7 +18,7 @@
                     <th><?= $this->Paginator->sort('cpf') ?></th>
                     <th><?= $this->Paginator->sort('sexo') ?></th>
                     <th><?= $this->Paginator->sort('visita_em') ?></th>
-                    <th class="actions"><?= __('Actions') ?></th>
+                    <th class="actions"><?= __('Ações') ?></th>
                 </tr>
             </thead>
             <tbody>

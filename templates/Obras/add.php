@@ -7,15 +7,15 @@
 <div class="row">
     <aside class="column">
         <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('List Obras'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+            <h4 class="heading"><?= __('Ações') ?></h4>
+            <?= $this->Html->link(__('Listar Obras'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
         </div>
     </aside>
     <div class="column-responsive column-80">
         <div class="obras form content">
             <?= $this->Form->create($obra) ?>
             <fieldset>
-                <legend><?= __('Add Obra') ?></legend>
+                <legend><?= __('Criar Obra') ?></legend>
                 <?php
                     echo $this->Form->control('titulo');
                     echo $this->Form->control('id_artista');
@@ -27,7 +27,7 @@
                     echo $this->Form->control('status');
                 ?>
             </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
+            <?= $this->Form->button(__('Salvar')) ?>
             <?= $this->Form->end() ?>
         </div>
     </div>

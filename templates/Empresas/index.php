@@ -5,7 +5,7 @@
  */
 ?>
 <div class="empresas index content">
-    <?= $this->Html->link(__('New Empresa'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <?= $this->Html->link(__('Criar Empresa'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <h3><?= __('Empresas') ?></h3>
     <div class="table-responsive">
         <table>
@@ -17,7 +17,7 @@
                     <th><?= $this->Paginator->sort('cnpj') ?></th>
                     <th><?= $this->Paginator->sort('logo') ?></th>
                     <th><?= $this->Paginator->sort('criada_em') ?></th>
-                    <th class="actions"><?= __('Actions') ?></th>
+                    <th class="actions"><?= __('Ações') ?></th>
                 </tr>
             </thead>
             <tbody>

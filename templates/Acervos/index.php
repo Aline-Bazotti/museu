@@ -5,16 +5,16 @@
  */
 ?>
 <div class="acervos index content">
-    <?= $this->Html->link(__('New Acervo'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <?= $this->Html->link(__('Criar Acervo'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <h3><?= __('Acervos') ?></h3>
     <div class="table-responsive">
         <table>
             <thead>
                 <tr>
-                    <th><?= $this->Paginator->sort('id') ?></th>
-                    <th><?= $this->Paginator->sort('nome_fantasia') ?></th>
+                    <th><?= $this->Paginator->sort('id',  ['label' => 'Código']) ?></th>
+                    <th><?= $this->Paginator->sort('nome_fantasia',  ['label' => 'Nome']) ?></th>
                     <th><?= $this->Paginator->sort('id_obra') ?></th>
-                    <th class="actions"><?= __('Actions') ?></th>
+                    <th class="actions"><?= __('Ações') ?></th>
                 </tr>
             </thead>
             <tbody>

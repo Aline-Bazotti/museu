@@ -14,7 +14,7 @@
  * @var \App\View\AppView $this
  */
 
-$cakeDescription = 'CakePHP: the rapid development php framework';
+$cakeDescription = 'Museunoesc';
 ?>
 <!DOCTYPE html>
 <html>
@@ -38,11 +38,16 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 <body>
     <nav class="top-nav">
         <div class="top-nav-title">
-            <a href="<?= $this->Url->build('/') ?>"><span>Cake</span>PHP</a>
+            <a href="<?= $this->Url->build('/') ?>"><span>Muse</span>unoesc</a>
         </div>
         <div class="top-nav-links">
-            <a target="_blank" rel="noopener" href="https://book.cakephp.org/4/">Documentation</a>
-            <a target="_blank" rel="noopener" href="https://api.cakephp.org/">API</a>
+            <a rel="noopener" href="/obras">Obras</a>
+            <a rel="noopener" href="/artistas">Artistas</a>
+            <a rel="noopener" href="/acervos">Acervos</a>
+            <a rel="noopener" href="/categorias">Categorias</a>
+            <a rel="noopener" href="/exibicoes">Exibicoes</a>
+            <a rel="noopener" href="/visitantes">Visitantes</a>
+            <a rel="noopener" href="/empresas">Locais</a>
         </div>
     </nav>
     <main class="main">

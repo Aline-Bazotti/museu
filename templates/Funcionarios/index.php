@@ -5,7 +5,7 @@
  */
 ?>
 <div class="funcionarios index content">
-    <?= $this->Html->link(__('New Funcionario'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <?= $this->Html->link(__('Criar Funcionario'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <h3><?= __('Funcionarios') ?></h3>
     <div class="table-responsive">
         <table>
@@ -17,7 +17,7 @@
                     <th><?= $this->Paginator->sort('email') ?></th>
                     <th><?= $this->Paginator->sort('senha') ?></th>
                     <th><?= $this->Paginator->sort('criado_em') ?></th>
-                    <th class="actions"><?= __('Actions') ?></th>
+                    <th class="actions"><?= __('Ações') ?></th>
                 </tr>
             </thead>
             <tbody>

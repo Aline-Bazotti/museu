@@ -5,7 +5,7 @@
  */
 ?>
 <div class="exibicoes index content">
-    <?= $this->Html->link(__('New Exibico'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <?= $this->Html->link(__('Criar Exibico'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <h3><?= __('Exibicoes') ?></h3>
     <div class="table-responsive">
         <table>
@@ -15,7 +15,7 @@
                     <th><?= $this->Paginator->sort('corredor') ?></th>
                     <th><?= $this->Paginator->sort('andar') ?></th>
                     <th><?= $this->Paginator->sort('id_obra') ?></th>
-                    <th class="actions"><?= __('Actions') ?></th>
+                    <th class="actions"><?= __('Ações') ?></th>
                 </tr>
             </thead>
             <tbody>

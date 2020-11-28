@@ -5,7 +5,7 @@
  */
 ?>
 <div class="categorias index content">
-    <?= $this->Html->link(__('New Categoria'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <?= $this->Html->link(__('Criar Categoria'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <h3><?= __('Categorias') ?></h3>
     <div class="table-responsive">
         <table>
@@ -13,7 +13,7 @@
                 <tr>
                     <th><?= $this->Paginator->sort('id') ?></th>
                     <th><?= $this->Paginator->sort('nome') ?></th>
-                    <th class="actions"><?= __('Actions') ?></th>
+                    <th class="actions"><?= __('Ações') ?></th>
                 </tr>
             </thead>
             <tbody>

@@ -5,7 +5,7 @@
  */
 ?>
 <div class="arquivos index content">
-    <?= $this->Html->link(__('New Arquivo'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <?= $this->Html->link(__('Criar Arquivo'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <h3><?= __('Arquivos') ?></h3>
     <div class="table-responsive">
         <table>
@@ -14,7 +14,7 @@
                     <th><?= $this->Paginator->sort('id') ?></th>
                     <th><?= $this->Paginator->sort('caminho_arquivo') ?></th>
                     <th><?= $this->Paginator->sort('id_obra') ?></th>
-                    <th class="actions"><?= __('Actions') ?></th>
+                    <th class="actions"><?= __('Ações') ?></th>
                 </tr>
             </thead>
             <tbody>

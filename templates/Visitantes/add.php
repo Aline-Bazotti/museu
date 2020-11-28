@@ -7,15 +7,15 @@
 <div class="row">
     <aside class="column">
         <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('List Visitantes'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+            <h4 class="heading"><?= __('Ações') ?></h4>
+            <?= $this->Html->link(__('Listar Visitantes'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
         </div>
     </aside>
     <div class="column-responsive column-80">
         <div class="visitantes form content">
             <?= $this->Form->create($visitante) ?>
             <fieldset>
-                <legend><?= __('Add Visitante') ?></legend>
+                <legend><?= __('Criar Visitante') ?></legend>
                 <?php
                     echo $this->Form->control('nome');
                     echo $this->Form->control('datanasc');
@@ -25,7 +25,7 @@
                     echo $this->Form->control('visita_em');
                 ?>
             </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
+            <?= $this->Form->button(__('Salvar')) ?>
             <?= $this->Form->end() ?>
         </div>
     </div>

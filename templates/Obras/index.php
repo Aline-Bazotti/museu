@@ -5,7 +5,7 @@
  */
 ?>
 <div class="obras index content">
-    <?= $this->Html->link(__('New Obra'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <?= $this->Html->link(__('Criar Obra'), ['action' => 'add'], ['class' => 'button float-right']) ?>
     <h3><?= __('Obras') ?></h3>
     <div class="table-responsive">
         <table>
@@ -20,7 +20,7 @@
                     <th><?= $this->Paginator->sort('aquisicao') ?></th>
                     <th><?= $this->Paginator->sort('id_categoria') ?></th>
                     <th><?= $this->Paginator->sort('status') ?></th>
-                    <th class="actions"><?= __('Actions') ?></th>
+                    <th class="actions"><?= __('Ações') ?></th>
                 </tr>
             </thead>
             <tbody>
