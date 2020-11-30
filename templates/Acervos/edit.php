@@ -9,9 +9,9 @@
         <div class="side-nav">
             <h4 class="heading"><?= __('Ações') ?></h4>
             <?= $this->Form->postLink(
-                __('Delete'),
+                __('Deletar'),
                 ['action' => 'delete', $acervo->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $acervo->id), 'class' => 'side-nav-item']
+                ['confirm' => __('Você tem certeza que deseja apagar {0}?', $acervo->id), 'class' => 'side-nav-item']
             ) ?>
             <?= $this->Html->link(__('Listar Acervos'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
         </div>
@@ -20,7 +20,7 @@
         <div class="acervos form content">
             <?= $this->Form->create($acervo) ?>
             <fieldset>
-                <legend><?= __('Edit Acervo') ?></legend>
+                <legend><?= __('Editar Acervo') ?></legend>
                 <?php
                     echo $this->Form->control('nome_fantasia');
                     echo $this->Form->control('id_obra');

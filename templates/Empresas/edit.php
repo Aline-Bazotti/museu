@@ -9,9 +9,9 @@
         <div class="side-nav">
             <h4 class="heading"><?= __('Ações') ?></h4>
             <?= $this->Form->postLink(
-                __('Delete'),
+                __('Deletar'),
                 ['action' => 'delete', $empresa->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $empresa->id), 'class' => 'side-nav-item']
+                ['confirm' => __('Você tem certeza que deseja apagar {0}?', $empresa->id), 'class' => 'side-nav-item']
             ) ?>
             <?= $this->Html->link(__('Listar Empresas'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
         </div>
@@ -20,7 +20,7 @@
         <div class="empresas form content">
             <?= $this->Form->create($empresa) ?>
             <fieldset>
-                <legend><?= __('Edit Empresa') ?></legend>
+                <legend><?= __('Editar Empresa') ?></legend>
                 <?php
                     echo $this->Form->control('razao_social');
                     echo $this->Form->control('nome_fantasia');

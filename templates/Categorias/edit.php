@@ -9,9 +9,9 @@
         <div class="side-nav">
             <h4 class="heading"><?= __('Ações') ?></h4>
             <?= $this->Form->postLink(
-                __('Delete'),
+                __('Deletar'),
                 ['action' => 'delete', $categoria->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $categoria->id), 'class' => 'side-nav-item']
+                ['confirm' => __('Você tem certeza que deseja apagar {0}?', $categoria->id), 'class' => 'side-nav-item']
             ) ?>
             <?= $this->Html->link(__('Listar Categorias'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
         </div>
@@ -20,7 +20,7 @@
         <div class="categorias form content">
             <?= $this->Form->create($categoria) ?>
             <fieldset>
-                <legend><?= __('Edit Categoria') ?></legend>
+                <legend><?= __('Editar Categoria') ?></legend>
                 <?php
                     echo $this->Form->control('nome');
                 ?>

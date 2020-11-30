@@ -9,9 +9,9 @@
         <div class="side-nav">
             <h4 class="heading"><?= __('Ações') ?></h4>
             <?= $this->Form->postLink(
-                __('Delete'),
+                __('Deletar'),
                 ['action' => 'delete', $exibico->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $exibico->id), 'class' => 'side-nav-item']
+                ['confirm' => __('Você tem certeza que deseja apagar {0}?', $exibico->id), 'class' => 'side-nav-item']
             ) ?>
             <?= $this->Html->link(__('Listar Exibicoes'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
         </div>
@@ -20,7 +20,7 @@
         <div class="exibicoes form content">
             <?= $this->Form->create($exibico) ?>
             <fieldset>
-                <legend><?= __('Edit Exibico') ?></legend>
+                <legend><?= __('Editar Exibico') ?></legend>
                 <?php
                     echo $this->Form->control('corredor');
                     echo $this->Form->control('andar');

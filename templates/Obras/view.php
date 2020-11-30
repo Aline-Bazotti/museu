@@ -8,8 +8,8 @@
     <aside class="column">
         <div class="side-nav">
             <h4 class="heading"><?= __('Ações') ?></h4>
-            <?= $this->Html->link(__('Edit Obra'), ['action' => 'edit', $obra->id], ['class' => 'side-nav-item']) ?>
-            <?= $this->Form->postLink(__('Delete Obra'), ['action' => 'delete', $obra->id], ['confirm' => __('Are you sure you want to delete # {0}?', $obra->id), 'class' => 'side-nav-item']) ?>
+            <?= $this->Html->link(__('Editar Obra'), ['action' => 'edit', $obra->id], ['class' => 'side-nav-item']) ?>
+            <?= $this->Form->postLink(__('Deletar Obra'), ['action' => 'delete', $obra->id], ['confirm' => __('Você tem certeza que deseja apagar {0}?', $obra->id), 'class' => 'side-nav-item']) ?>
             <?= $this->Html->link(__('Listar Obras'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
             <?= $this->Html->link(__('Criar Obra'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
         </div>

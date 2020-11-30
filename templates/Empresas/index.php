@@ -30,9 +30,9 @@
                     <td><?= h($empresa->logo) ?></td>
                     <td><?= h($empresa->criada_em) ?></td>
                     <td class="actions">
-                        <?= $this->Html->link(__('View'), ['action' => 'view', $empresa->id]) ?>
-                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $empresa->id]) ?>
-                        <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $empresa->id], ['confirm' => __('Are you sure you want to delete # {0}?', $empresa->id)]) ?>
+                        <?= $this->Html->link(__('Ver'), ['action' => 'view', $empresa->id]) ?>
+                        <?= $this->Html->link(__('Editar'), ['action' => 'edit', $empresa->id]) ?>
+                        <?= $this->Form->postLink(__('Deletar'), ['action' => 'delete', $empresa->id], ['confirm' => __('Você tem certeza que deseja apagar {0}?', $empresa->id)]) ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>
@@ -41,12 +41,12 @@
     </div>
     <div class="paginator">
         <ul class="pagination">
-            <?= $this->Paginator->first('<< ' . __('first')) ?>
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
+            <?= $this->Paginator->first('<< ' . __('primeira')) ?>
+            <?= $this->Paginator->prev('< ' .__('anterior')) ?>
             <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-            <?= $this->Paginator->last(__('last') . ' >>') ?>
+            <?= $this->Paginator->next(__('próxima') . ' >') ?>
+            <?= $this->Paginator->last(__('última') . ' >>') ?>
         </ul>
-        <p><?= $this->Paginator->counter(__('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')) ?></p>
+        <p><?= $this->Paginator->counter(__('Página {{page}} de {{pages}}, mostrando {{current}} registros de um total de {{count}}')) ?></p>
     </div>
 </div>

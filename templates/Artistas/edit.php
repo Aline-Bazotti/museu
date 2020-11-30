@@ -9,9 +9,9 @@
         <div class="side-nav">
             <h4 class="heading"><?= __('Ações') ?></h4>
             <?= $this->Form->postLink(
-                __('Delete'),
+                __('Deletar'),
                 ['action' => 'delete', $artista->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $artista->id), 'class' => 'side-nav-item']
+                ['confirm' => __('Você tem certeza que deseja apagar {0}?', $artista->id), 'class' => 'side-nav-item']
             ) ?>
             <?= $this->Html->link(__('Listar Artistas'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
         </div>
@@ -20,7 +20,7 @@
         <div class="artistas form content">
             <?= $this->Form->create($artista) ?>
             <fieldset>
-                <legend><?= __('Edit Artista') ?></legend>
+                <legend><?= __('Editar Artista') ?></legend>
                 <?php
                     echo $this->Form->control('nome');
                     echo $this->Form->control('dados_biograficos');

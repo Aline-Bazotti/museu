@@ -8,8 +8,8 @@
     <aside class="column">
         <div class="side-nav">
             <h4 class="heading"><?= __('Ações') ?></h4>
-            <?= $this->Html->link(__('Edit Acervo'), ['action' => 'edit', $acervo->id], ['class' => 'side-nav-item']) ?>
-            <?= $this->Form->postLink(__('Delete Acervo'), ['action' => 'delete', $acervo->id], ['confirm' => __('Are you sure you want to delete # {0}?', $acervo->id), 'class' => 'side-nav-item']) ?>
+            <?= $this->Html->link(__('Editar Acervo'), ['action' => 'edit', $acervo->id], ['class' => 'side-nav-item']) ?>
+            <?= $this->Form->postLink(__('Deletar Acervo'), ['action' => 'delete', $acervo->id], ['confirm' => __('Você tem certeza que deseja apagar {0}?', $acervo->nome_fantasia), 'class' => 'side-nav-item']) ?>
             <?= $this->Html->link(__('Listar Acervos'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
             <?= $this->Html->link(__('Criar Acervo'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
         </div>
@@ -27,7 +27,7 @@
                     <td><?= $this->Number->format($acervo->id) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Id Obra') ?></th>
+                    <th><?= __('Código da Obra') ?></th>
                     <td><?= $this->Number->format($acervo->id_obra) ?></td>
                 </tr>
             </table>

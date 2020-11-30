@@ -41,13 +41,15 @@ $cakeDescription = 'Museunoesc';
             <a href="<?= $this->Url->build('/') ?>"><span>Muse</span>unoesc</a>
         </div>
         <div class="top-nav-links">
+            <a rel="noopener" href="/visitantes">Visitantes</a>
             <a rel="noopener" href="/obras">Obras</a>
             <a rel="noopener" href="/artistas">Artistas</a>
-            <a rel="noopener" href="/acervos">Acervos</a>
             <a rel="noopener" href="/categorias">Categorias</a>
-            <a rel="noopener" href="/exibicoes">Exibicoes</a>
-            <a rel="noopener" href="/visitantes">Visitantes</a>
-            <a rel="noopener" href="/empresas">Locais</a>
+            <a rel="noopener" href="/arquivos">Arquivos</a>
+            <a rel="noopener" href="/acervos">Acervos</a>
+            <a rel="noopener" href="/exibicoes">Exibições</a>
+            <a rel="noopener" href="/empresas">Empresas</a>
+            <a rel="noopener" href="/funcionarios">Funcionários</a>
         </div>
     </nav>
     <main class="main">

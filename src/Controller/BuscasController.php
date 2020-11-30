@@ -20,20 +20,34 @@ class BuscasController extends AppController
     {
         if ($this->request->is('get')) {
             
-
             $buscas = array();
 
             $termo = $this->request->getQuery('termo');
-            $this->log($termo);
-            $obras = TableRegistry::getTableLocator()->get('Obras')->find('all', [
-                'conditions' => ['Obras.titulo iLIKE' => '%'.$termo.'%']
-            ]);
+            
+            $listaCodigoCategoria = TableRegistry::getTableLocator()->get('Categorias')->find()->select(['id'])->where([
+                 'Categorias.nome iLIKE' => '%'.$termo.'%']
+            );
+
+            $obras = TableRegistry::getTableLocator()->get('Obras')->find()->where(
+                ['or' => ['Obras.titulo iLIKE' => '%'.$termo.'%', 'Obras.id_categoria in' => $listaCodigoCategoria]]);
 
             foreach ($obras as $obra) {
                 $busca = $this->Buscas->newEmptyEntity();
                 $busca->titulo = $obra->titulo;
                 $busca->descricao = $obra->tecnica;
                 $busca->link_view = "/obras/view/".$obra->id;
+                array_push($buscas, $busca);
+            }
+
+            $artistas = TableRegistry::getTableLocator()->get('Artistas')->find('all', [
+                'conditions' => ['Artistas.nome iLIKE' => '%'.$termo.'%']
+            ]);
+
+            foreach ($artistas as $artista) {
+                $busca = $this->Buscas->newEmptyEntity();
+                $busca->titulo = $artista->nome;
+                $busca->descricao = $artista->dados_biograficos;
+                $busca->link_view = "/artistas/view/".$artista->id;
                 array_push($buscas, $busca);
             }
 

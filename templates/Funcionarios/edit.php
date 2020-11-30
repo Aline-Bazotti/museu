@@ -9,9 +9,9 @@
         <div class="side-nav">
             <h4 class="heading"><?= __('Ações') ?></h4>
             <?= $this->Form->postLink(
-                __('Delete'),
+                __('Deletar'),
                 ['action' => 'delete', $funcionario->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $funcionario->id), 'class' => 'side-nav-item']
+                ['confirm' => __('Você tem certeza que deseja apagar {0}?', $funcionario->id), 'class' => 'side-nav-item']
             ) ?>
             <?= $this->Html->link(__('Listar Funcionarios'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
         </div>
@@ -20,7 +20,7 @@
         <div class="funcionarios form content">
             <?= $this->Form->create($funcionario) ?>
             <fieldset>
-                <legend><?= __('Edit Funcionario') ?></legend>
+                <legend><?= __('Editar Funcionario') ?></legend>
                 <?php
                     echo $this->Form->control('nome');
                     echo $this->Form->control('nivel_acesso');
