@@ -25,12 +25,12 @@ use Cake\Http\Exception\NotFoundException;
 <html>
 <body>
   <div class="row-center">
-    <div>
+    <div class="row">
         <h5>Busque por uma obra, autor ou coleção.</h5>
     </div>
-    <form class="row" action="#" method="post">
-        <input type="text" id="pesquisa" placeholder="Faça uma pesquisa..." required="">
-        <button>Buscar</button>
+    <form class="row" action="buscas" method="get">
+        <input type="text" id="pesquisa" placeholder="Faça uma pesquisa..." required="true" name="termo">
+        <button type="submit">Buscar</button>
     </form>
   </div>
 </body>
