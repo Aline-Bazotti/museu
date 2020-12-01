@@ -5,8 +5,11 @@
  */
 ?>
 <div class="visitantes index content">
-    <?= $this->Html->link(__('Criar Visitante'), ['action' => 'add'], ['class' => 'button float-right']) ?>
-    <h3><?= __('Visitantes') ?></h3>
+    <div class="row">
+        <div class="column"><h3><?= __('Visitantes') ?></h3></div>
+        <div class="column column-offset-50"><?= $this->Html->link(__('Informações'), ['action' => 'informacoes'], ['class' => 'button float']) ?></div>
+        <div class="column "><?= $this->Html->link(__('Criar Visitante'), ['action' => 'add'], ['class' => 'button float-right']) ?></div>
+    </div>
     <div class="table-responsive">
         <table>
             <thead>

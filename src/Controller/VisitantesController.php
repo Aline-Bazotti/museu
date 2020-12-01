@@ -23,6 +23,44 @@ class VisitantesController extends AppController
         $this->set(compact('visitantes'));
     }
 
+    private function calcularIdade($dataNascimento){
+        $interval =$dataNascimento->diff( new \DateTime( date('Y-m-d') ) );
+
+        return $interval->format('%Y');
+    }
+
+     /**
+     * Informacoes method
+     *
+     * @return \Cake\Http\Response|null|void Renders view
+     */
+    public function informacoes()
+    {
+        $visitantes = $this->Visitantes->find();
+
+        $visitantes_idades = array();
+        $visitantes_quantidade = 0;
+
+        foreach ($visitantes as $visitante) {
+            array_push($visitantes_idades, $this->calcularIdade($visitante->datanasc));
+            $visitantes_quantidade++;
+        }
+
+        $numero_visitas = $visitantes_quantidade;
+
+        if($numero_visitas > 0 ){
+        
+            $media_idade = array_sum($visitantes_idades) / $numero_visitas;
+
+        } else {
+
+            $media_idade = 0;
+        }
+
+        $this->set(compact('media_idade'));
+        $this->set(compact('numero_visitas'));
+    }
+
     /**
      * View method
      *
