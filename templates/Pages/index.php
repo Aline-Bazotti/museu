@@ -26,7 +26,7 @@ use Cake\Http\Exception\NotFoundException;
 <body>
   <div class="row-center">
     <div class="row">
-        <h5>Busque por uma obra, artista ou acervo.</h5>
+        <h5>Busque por uma obra, artista ou categoria.</h5>
     </div>
     <form class="row" action="buscas" method="get">
         <input type="text" id="pesquisa" placeholder="Faça uma pesquisa..." required="true" name="termo">
